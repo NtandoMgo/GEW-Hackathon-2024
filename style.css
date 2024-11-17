@@ -5852,6 +5852,9 @@ footer .footer-bottom {
   /* inset: 200 0 0 auto; */
   display: grid;
   grid-template-rows: 70px 1fr 70px;
+  display:  none;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
 }
 .cartTab h1{
   padding: 20px;
@@ -5900,4 +5903,8 @@ footer .footer-bottom {
 }
 .listCart{
   overflow: auto;
+}
+body.showCart .cartTab {
+  display: grid;
+  transform: translateX(0);
 }
