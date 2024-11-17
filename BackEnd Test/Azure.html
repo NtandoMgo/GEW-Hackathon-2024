@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Question Answering</title>
+</head>
+<body>
+    <h1>Ask Your Questions Here!</h1>
+    <input type="text" id="question" placeholder="Type your question...">
+    <button onclick="getAnswer()">Get Answer</button>
+    <p id="answer"></p>
+
+    <script>
+        async function getAnswer() {
+            const question = document.getElementById('question').value;
+            const response = await fetch('YOUR_API_ENDPOINT', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Ocp-Apim-Subscription-Key': 'YOUR_SUBSCRIPTION_KEY'
+                },
+                body: JSON.stringify({ question })
+            });
+            const data = await response.json();
+            document.getElementById('answer').innerText = data.answers[0].answer;
+        }
+    </script>
+</body>
+</html>
