@@ -5801,3 +5801,103 @@ footer .footer-bottom {
   background: url(assets/img/preloader.gif) center no-repeat #ffffff;
   text-align: center;
 }
+
+/* Shop styles*/
+/* ========================================================================= */
+
+.shop-container {
+  text-align: center;
+}
+
+.ListProduct .shop-tem img{
+  width: 90%;
+  filter: drop-shadow(0 50px 20px #0009);
+}
+.ListProduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ListProduct .shop-tem {
+  background-color: #eeeee6;
+  padding: 20px;
+  border-radius: 20px;
+}
+.ListProduct .shop-tem h2{
+  font-weight: 500;
+  font-size: large;
+}
+.ListProduct .shop-tem .item-price{
+  letter-spacing: 6px;
+  font-size: small;
+}
+.ListProduct .shop-tem .addCart{
+  background-color: #353432;
+  color: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+.cartTab{
+  width: 400px;
+  background-color: #353432;
+  color: #eee;
+  position: fixed;
+  top: 150px;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  /* inset: 200 0 0 auto; */
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+}
+.cartTab h1{
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  color: #eee;
+}
+.cartTab .butn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .butn button{
+  background-color: #017d3f;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cartTab .butn .cart-close{
+  background-color: #eee;
+}
+.cartTab .listCart .list-item img{
+  width: 100%;
+}
+.cartTab .listCart .list-item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+.listCart .quantity span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+  background-color: transparent;
+  color: #eee;
+}
+.listCart .list-item:nth-child(even){
+  background-color: #eee1;
+}
+.listCart{
+  overflow: auto;
+}
